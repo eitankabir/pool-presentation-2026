@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>בריכת קהילת מפלסים — מצגת 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress"></div>
+
+<div id="presentation">
+
+  <!-- ══════════════════════════════════════════════
+       שקף 1 — פתיחה
+  ══════════════════════════════════════════════ -->
+  <div class="slide bg-mixed" id="s1">
+    <div class="logo-main">
+      <img src="logo.jpg" alt="לוגו בריכת מפלסים"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-fallback">🏊</span>
+    </div>
+    <h1>בריכת קהילת מפלסים</h1>
+    <p class="s1-subtitle">הפעלה יוני 2026</p>
+    <p class="s1-note">הצגה לוועד האגודה הקהילתית</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       שקף 2 — נוהל אירועים
+  ══════════════════════════════════════════════ -->
+  <div class="slide bg-navy" id="s2">
+    <div class="logo-corner">
+      <img src="logo.jpg" alt="לוגו"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-fallback">🏊</span>
+    </div>
+    <h2 class="slide-title compact">📋 עדכון נוהל אירועים — עדכון 04</h2>
+
+    <div class="s2-body">
+      <div class="s2-col">
+        <div class="col-head">✅ מה הנוהל נותן</div>
+        <ul class="bullet-list">
+          <li class="bullet-item">סדר ברור בתהליך הזמנת אירועים</li>
+          <li class="bullet-item">הגדרת אחריות מלאה (מזמין | מפעיל | אגודה)</li>
+          <li class="bullet-item">חיזוק בטיחות, רגולציה ואכיפה</li>
+          <li class="bullet-item">שמירה על איכות חיי הקהילה (כולל נוהל מוזיקה)</li>
+          <li class="bullet-item">שקיפות ואחידות בתמחור</li>
+        </ul>
+      </div>
+      <div class="s2-col">
+        <div class="col-head">🔄 עיקרי השינויים</div>
+        <ul class="bullet-list">
+          <li class="bullet-item">נוהל מפורט ומובנה במקום נוהל כללי</li>
+          <li class="bullet-item">תהליך אישור מסודר ומחייב</li>
+          <li class="bullet-item">הגבלות ברורות: כמות משתתפים, אירוע אחד בשבוע</li>
+          <li class="bullet-item">כללי מוזיקה: עד 23:00 + הפניית רמקולים</li>
+          <li class="bullet-item">חיזוק סמכויות לעצירת אירוע</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="price-compare">
+      <div class="pc-col pc-before">
+        <div class="pc-head"><span>⚠️</span>נוהל 2025 — לפני</div>
+        <ul class="pc-list">
+          <li>שעת מציל: <strong>55 ₪</strong> (שולם ישירות למציל)</li>
+          <li>עד 60 משתתפים: <strong>300 ₪</strong> לכל שעה או חלק ממנה</li>
+          <li>61–100 משתתפים: <strong>600 ₪</strong> כולל מציל ומפעיל (כ"ש מעל 3ש׳ = 200₪)</li>
+          <li>101–250 משתתפים: <strong>1,300 ₪</strong> (כ"ש מעל 3ש׳ = 200₪)</li>
+          <li>חתונה 251–300 משתתפים: <strong>3,000 ₪</strong> + מאבטח + חובש</li>
+          <li class="pc-note">תמחור שעתי מורכב, מדרגות, תוספות, חישובים — בלתי ברור</li>
+        </ul>
+      </div>
+      <div class="pc-arrow">←</div>
+      <div class="pc-col pc-after">
+        <div class="pc-head"><span>✅</span>נוהל 2026 — אחרי</div>
+        <ul class="pc-list">
+          <li>אירוע קהילתי: <strong>300 ₪</strong></li>
+          <li>אירוע קטן (עד 100 משתתפים): <strong>900 ₪</strong></li>
+          <li>אירוע גדול (עד 300 משתתפים): <strong>3,000 ₪</strong></li>
+          <li>שעת מציל: נפרד — ישירות למציל</li>
+          <li class="pc-simple">מודל פשוט, ברור, אחיד ✓</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       שקף 3 — אחריות מנהל הבריכה
+  ══════════════════════════════════════════════ -->
+  <div class="slide bg-teal" id="s3">
+    <div class="logo-corner">
+      <img src="logo.jpg" alt="לוגו"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-fallback">🏊</span>
+    </div>
+    <h2 class="slide-title compact">👨‍💼 תחומי אחריות — מנהל הבריכה</h2>
+
+    <div class="resp-grid">
+      <div class="resp-card">
+        <span class="rc-icon">💰</span>
+        <div class="rc-title">ניהול תקציב ובקרה</div>
+        <div class="rc-desc">ניהול תקציב, מעקב הוצאות והכנסות, ניהול רכש, דיווח שוטף</div>
+      </div>
+      <div class="resp-card">
+        <span class="rc-icon">⚙️</span>
+        <div class="rc-title">ניהול תפעול שוטף</div>
+        <div class="rc-desc">פתיחה וסגירה, ניהול פעילות יומית, סדר וניקיון</div>
+      </div>
+      <div class="resp-card">
+        <span class="rc-icon">🛡️</span>
+        <div class="rc-title">בטיחות ועמידה בתקנים</div>
+        <div class="rc-desc">מצילים והכשרות, ציוד בטיחות, רגולציה</div>
+      </div>
+      <div class="resp-card">
+        <span class="rc-icon">👥</span>
+        <div class="rc-title">ניהול כוח אדם</div>
+        <div class="rc-desc">שיבוץ מצילים, פיקוח צוות, אישור שעות</div>
+      </div>
+      <div class="resp-card">
+        <span class="rc-icon">🔧</span>
+        <div class="rc-title">תחזוקה ותשתיות</div>
+        <div class="rc-desc">תקינות מתקנים, טיפול בתקלות, עבודה מול ספקים</div>
+      </div>
+      <div class="resp-card">
+        <span class="rc-icon">💧</span>
+        <div class="rc-title">איכות מים ובקרה</div>
+        <div class="rc-desc">בדיקות מים, תיעוד ומעקב, טיפול בחריגות</div>
+      </div>
+      <div class="resp-card">
+        <span class="rc-icon">🎉</span>
+        <div class="rc-title">ניהול אירועים</div>
+        <div class="rc-desc">היתכנות, שיבוץ מצילים, פיקוח בשטח</div>
+      </div>
+      <div class="resp-card">
+        <span class="rc-icon">🤝</span>
+        <div class="rc-title">שירות וקהילה</div>
+        <div class="rc-desc">מענה לתושבים, טיפול בפניות, חוויית משתמש</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       שקף 4 — תקציב 2026
+  ══════════════════════════════════════════════ -->
+  <div class="slide bg-navy" id="s4">
+    <div class="logo-corner">
+      <img src="logo.jpg" alt="לוגו"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-fallback">🏊</span>
+    </div>
+    <h2 class="slide-title compact">💼 תקציב 2026 — במספרים</h2>
+
+    <div class="s4-body">
+      <div class="s4-left">
+        <div class="stat-col">
+          <div class="stat-card red-border">
+            <div class="stat-num c-red" data-count="320000" data-suffix="₪">320,000₪</div>
+            <div class="stat-lbl">💸 סה"כ הוצאות</div>
+          </div>
+          <div class="stat-card green-border">
+            <div class="stat-num c-green" data-count="22000" data-suffix="₪">22,000₪</div>
+            <div class="stat-lbl">💰 סה"כ הכנסות</div>
+          </div>
+          <div class="stat-card gold-border">
+            <div class="stat-num c-gold" data-count="298000" data-suffix="₪">298,000₪</div>
+            <div class="stat-lbl">🏊 עלות נטו לקהילה</div>
+          </div>
+        </div>
+        <div class="income-section">
+          <div class="income-title">💰 מקורות הכנסה</div>
+          <div class="income-items">
+            <div class="income-item">
+              <div class="ii-lbl">🏛️ הידרותרפיה</div>
+              <div class="ii-num" data-count="10000" data-suffix="₪">10,000₪</div>
+            </div>
+            <div class="income-item">
+              <div class="ii-lbl">🎉 אירועים</div>
+              <div class="ii-num" data-count="12000" data-suffix="₪">12,000₪</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s4-right">
+        <div class="exp-title">📊 פילוח הוצאות</div>
+        <div class="expense-list">
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-dot" style="background:#2196f3"></span>
+              <span class="exp-name">מים וביוב</span>
+              <span class="exp-amount">81,300 ₪</span>
+              <span class="exp-pct" style="color:#2196f3">25%</span>
+            </div>
+            <div class="exp-track"><div class="exp-fill" style="width:25%;background:#2196f3"></div></div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-dot" style="background:#0d7a6b"></span>
+              <span class="exp-name">מצילים וניקיון</span>
+              <span class="exp-amount">76,632 ₪</span>
+              <span class="exp-pct" style="color:#26c4a3">24%</span>
+            </div>
+            <div class="exp-track"><div class="exp-fill" style="width:24%;background:#0d7a6b"></div></div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-dot" style="background:#e8a020"></span>
+              <span class="exp-name">הפעלה וניהול</span>
+              <span class="exp-amount">68,440 ₪</span>
+              <span class="exp-pct" style="color:#e8a020">21%</span>
+            </div>
+            <div class="exp-track"><div class="exp-fill" style="width:21%;background:#e8a020"></div></div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-dot" style="background:#e85555"></span>
+              <span class="exp-name">חשמל</span>
+              <span class="exp-amount">29,227 ₪</span>
+              <span class="exp-pct" style="color:#e85555">9%</span>
+            </div>
+            <div class="exp-track"><div class="exp-fill" style="width:9%;background:#e85555"></div></div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-dot" style="background:#9b59b6"></span>
+              <span class="exp-name">כימיקלים</span>
+              <span class="exp-amount">21,684 ₪</span>
+              <span class="exp-pct" style="color:#9b59b6">7%</span>
+            </div>
+            <div class="exp-track"><div class="exp-fill" style="width:7%;background:#9b59b6"></div></div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-dot" style="background:#26c4a3"></span>
+              <span class="exp-name">תחזוקה</span>
+              <span class="exp-amount">18,946 ₪</span>
+              <span class="exp-pct" style="color:#26c4a3">6%</span>
+            </div>
+            <div class="exp-track"><div class="exp-fill" style="width:6%;background:#26c4a3"></div></div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-dot" style="background:#7f8c8d"></span>
+              <span class="exp-name">אחר</span>
+              <span class="exp-amount">23,771 ₪</span>
+              <span class="exp-pct" style="color:#aaa">8%</span>
+            </div>
+            <div class="exp-track"><div class="exp-fill" style="width:8%;background:#7f8c8d"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       שקף 5 — השוואה 2025 → 2026
+  ══════════════════════════════════════════════ -->
+  <div class="slide bg-mixed" id="s5">
+    <div class="logo-corner">
+      <img src="logo.jpg" alt="לוגו"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-fallback">🏊</span>
+    </div>
+    <h2 class="slide-title">📈 השוואה 2025 → 2026</h2>
+
+    <div class="comp-table5">
+      <div class="comp-row5 hdr5">
+        <div class="c5-lbl gld">סעיף</div>
+        <div class="c5-25 gld" style="font-weight:700">2025</div>
+        <div class="c5-26 gld">2026</div>
+        <div class="c5-chg gld">שינוי</div>
+      </div>
+      <div class="comp-row5">
+        <div class="c5-lbl">💰 הכנסות</div>
+        <div class="c5-25" data-count="7975" data-suffix="₪">7,975₪</div>
+        <div class="c5-26 up-g" data-count="22000" data-suffix="₪">22,000₪</div>
+        <div class="c5-chg up-g">▲ 176%</div>
+      </div>
+      <div class="comp-row5">
+        <div class="c5-lbl">💸 הוצאות</div>
+        <div class="c5-25" data-count="285116" data-suffix="₪">285,116₪</div>
+        <div class="c5-26 dn-r" data-count="314808" data-suffix="₪">314,808₪</div>
+        <div class="c5-chg dn-r">▲ 10.4%</div>
+      </div>
+      <div class="comp-row5">
+        <div class="c5-lbl">🔧 השקעות</div>
+        <div class="c5-25" data-count="17228" data-suffix="₪">17,228₪</div>
+        <div class="c5-26 up-g" data-count="5192" data-suffix="₪">5,192₪</div>
+        <div class="c5-chg up-g">▼ 70%</div>
+      </div>
+      <div class="comp-row5 net5">
+        <div class="c5-lbl gld">🏊 עלות נטו</div>
+        <div class="c5-25" data-count="294369" data-suffix="₪">294,369₪</div>
+        <div class="c5-26 gld" data-count="298000" data-suffix="₪">298,000₪</div>
+        <div class="c5-chg gld">▲ 1.2%</div>
+      </div>
+    </div>
+
+    <div class="note-box5">
+      💡 בשנת 2025: השקעות בסך 18,000₪ לא נכללו בהוצאות השוטפות — לכן התקציב נראה 280,000₪ במקום 298,000₪
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       שקף 6 — זמני פתיחה
+  ══════════════════════════════════════════════ -->
+  <div class="slide bg-navy" id="s6">
+    <div class="logo-corner">
+      <img src="logo.jpg" alt="לוגו"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-fallback">🏊</span>
+    </div>
+    <h2 class="slide-title compact">🕐 שעות פתיחה — עונת 2026</h2>
+
+    <div class="hours-grid">
+      <div class="hours-col">
+        <div class="hc-title">☀️ יוני *</div>
+        <div class="hour-row"><span class="hr-day">א, ג, ה</span><span class="hr-time">15:00–18:00</span></div>
+        <div class="hour-row"><span class="hr-day">ב, ד</span><span class="hr-time">15:00–20:00</span></div>
+        <div class="hour-row"><span class="hr-day">שישי</span><span class="hr-time">12:00–18:00</span></div>
+        <div class="hour-row"><span class="hr-day">שבת</span><span class="hr-time">10:00–18:00</span></div>
+      </div>
+
+      <div class="hours-col">
+        <div class="hc-title">🌞 יולי – אוגוסט</div>
+        <div class="hour-row"><span class="hr-day">ראשון</span><span class="hr-time">15:00–18:00</span></div>
+        <div class="hour-row"><span class="hr-day">ב–ה (בוקר)</span><span class="hr-time">10:00–13:00</span></div>
+        <div class="hour-row"><span class="hr-day">ב–ה (אחה"צ)</span><span class="hr-time">15:00–19:00</span></div>
+        <div class="hour-row"><span class="hr-day">שישי</span><span class="hr-time">12:00–18:00</span></div>
+        <div class="hour-row"><span class="hr-day">שבת</span><span class="hr-time">10:00–18:00</span></div>
+      </div>
+
+      <div class="hours-col col-wide col-autumn">
+        <div class="hc-title">🍂 ספטמבר (תאריכים ספציפיים)</div>
+        <div class="hour-row"><span class="hr-day">שישי 04/09</span><span class="hr-time">14:00–18:00</span></div>
+        <div class="hour-row"><span class="hr-day">שבת 05/09</span><span class="hr-time">10:00–18:00</span></div>
+        <div class="hour-row"><span class="hr-day">שישי 11/09</span><span class="hr-time">10:00–14:00</span></div>
+        <div class="hour-row"><span class="hr-day">שבת 12/09</span><span class="hr-time">10:00–18:00</span></div>
+        <div class="hour-row"><span class="hr-day">ראשון 13/09</span><span class="hr-time">12:00–18:00</span></div>
+        <div class="hour-row"><span class="hr-day">שישי 18/09</span><span class="hr-time">14:00–18:00</span></div>
+        <div class="hour-row"><span class="hr-day">שבת 19/09 🏁</span><span class="hr-time">10:00–18:00</span></div>
+      </div>
+    </div>
+    <p class="s6-community">💙 הבריכה פתוחה לכל תושבי הקהילה — נשמח לראותכם!</p>
+    <p class="s6-asterisk">* שעות יוני צומצמו לעומת התוכנית המקורית לצורך עמידה בתקציב</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       שקף 7 — המלצות לאישור
+  ══════════════════════════════════════════════ -->
+  <div class="slide bg-teal" id="s7">
+    <div class="logo-corner">
+      <img src="logo.jpg" alt="לוגו"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-fallback">🏊</span>
+    </div>
+    <h2 class="slide-title">✅ המלצות לאישור הוועד</h2>
+
+    <div class="approval-list">
+      <div class="approval-item">
+        <span class="ai-icon">💰</span>
+        <span>אישור מחירון אירועים המעודכן 2026</span>
+      </div>
+      <div class="approval-item">
+        <span class="ai-icon">👤</span>
+        <span>אישור הגדלת שכר Fish (מנהל הבריכה)</span>
+      </div>
+      <div class="approval-item">
+        <span class="ai-icon">📋</span>
+        <span>אישור עדכון נוהל בריכה ונוהל אירועים</span>
+      </div>
+      <div class="approval-item">
+        <span class="ai-icon">🏊</span>
+        <span>מדיניות חוגים: ילדי קהילה ללא תשלום | ילדים חיצוניים — 10% מהכנסות המדריך לאגודה</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       שקף 8 — משימות והמשך
+  ══════════════════════════════════════════════ -->
+  <div class="slide bg-mixed" id="s8">
+    <div class="logo-corner">
+      <img src="logo.jpg" alt="לוגו"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-fallback">🏊</span>
+    </div>
+    <h2 class="slide-title">🗓️ פעולות המשך — עד סוף אפריל 2026</h2>
+
+    <div class="s8-responsible">👤 אחראי: Fish בתיאום עם הנהלת האגודה</div>
+
+    <div class="task-list">
+      <div class="task-item">
+        <span>📄 עדכון נוהל בריכה</span>
+        <span class="ti-date">עד סוף אפריל 2026</span>
+      </div>
+      <div class="task-item">
+        <span>📝 עדכון מסמך אחריות Fish</span>
+        <span class="ti-date">עד סוף אפריל 2026</span>
+      </div>
+      <div class="task-item">
+        <span>🎉 עדכון נוהל אירועים</span>
+        <span class="ti-date">עד סוף אפריל 2026</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /#presentation -->
+
+<!-- ══════════════════════════════════════════════
+     ניווט
+══════════════════════════════════════════════ -->
+<nav id="nav">
+  <button id="btn-prev" onclick="Slides.prev()" title="הקודם">→</button>
+  <span id="slide-counter">1 / 8</span>
+  <button id="btn-next" onclick="Slides.next()" title="הבא">←</button>
+</nav>
+
+<script src="data.js"></script>
+<script src="charts.js"></script>
+<script src="slides.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => Slides.init());
+</script>
+</body>
+</html>
