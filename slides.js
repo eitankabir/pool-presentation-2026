@@ -14,6 +14,28 @@ const Slides = (() => {
       if (e.key === 'ArrowLeft' || e.key === 'ArrowDown')  next();
       if (e.key === 'ArrowRight' || e.key === 'ArrowUp')   prev();
     });
+
+    _initSwipe();
+  }
+
+  function _initSwipe() {
+    const el = document.getElementById('presentation');
+    let startX = 0, startY = 0;
+
+    el.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }, { passive: true });
+
+    el.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - startX;
+      const dy = e.changedTouches[0].clientY - startY;
+      // Only navigate on clear horizontal swipe (not vertical scroll)
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 44) {
+        // RTL: swipe right → prev, swipe left → next
+        if (dx > 0) prev(); else next();
+      }
+    }, { passive: true });
   }
 
   function next() {

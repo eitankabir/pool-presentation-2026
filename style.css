@@ -790,3 +790,104 @@ h2 { font-size: clamp(46px, 5.2vw, 72px); }
   text-align: center;
   margin-top: 6px;
 }
+
+/* ════════════════════════════════════════════════
+   MOBILE RESPONSIVE — max-width 768px
+════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Base slide ── */
+  .slide {
+    padding: 14px 14px 80px;
+    overflow-y: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+  h1 { font-size: clamp(30px, 8vw, 40px); }
+  h2 { font-size: clamp(22px, 6vw, 30px); }
+  .slide-title         { font-size: clamp(21px, 5.5vw, 27px); margin-bottom: 14px; }
+  .slide-title.compact { font-size: clamp(19px, 5vw, 24px);   margin-bottom: 10px; }
+
+  /* ── Logo corner ── */
+  .logo-corner { height: 36px; top: 12px; right: 12px; }
+  .logo-corner img { height: 36px; }
+
+  /* ── Navigation ── */
+  #nav { bottom: 14px; gap: 10px; }
+  #nav button { width: 54px; height: 54px; font-size: 26px; }
+  #slide-counter { font-size: 16px; }
+
+  /* ═══ Slide 1 ═══ */
+  .logo-main img { height: 80px; }
+  .logo-main .logo-fallback { font-size: 72px; }
+  .s1-subtitle { font-size: 24px; }
+  .s1-note     { font-size: 17px; }
+
+  /* ═══ Slide 2: נוהל אירועים ═══ */
+  .s2-body { flex-direction: column; gap: 10px; margin-bottom: 12px; }
+  .s2-col  { padding: 14px 16px; }
+  .col-head { font-size: 19px; }
+  .bullet-item { font-size: 16px; }
+  .price-compare { flex-direction: column; gap: 10px; }
+  .pc-arrow { display: none; }
+  .pc-head  { font-size: 17px; }
+  .pc-list li { font-size: 15px; }
+  .pc-simple  { font-size: 16px; }
+
+  /* ═══ Slide 3: אחריות Fish ═══ */
+  .resp-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .rc-icon  { font-size: 24px; }
+  .rc-title { font-size: 16px; }
+  .rc-desc  { font-size: 14px; }
+
+  /* ═══ Slide 4: תקציב ═══ */
+  #s4 { padding-top: 14px; }
+  .s4-body  { flex-direction: column; gap: 12px; }
+  .s4-left  { flex: none; width: 100%; gap: 10px; }
+  .s4-right { flex: none; width: 100%; padding: 14px 16px; }
+  .stat-num  { font-size: 40px; }
+  .stat-lbl  { font-size: 14px; }
+  .stat-card { padding: 10px 12px; }
+  .ii-num    { font-size: 26px; }
+  .ii-lbl    { font-size: 14px; }
+  .income-title { font-size: 16px; }
+  .exp-title  { font-size: 16px; }
+  .exp-name   { font-size: 15px; }
+  .exp-amount { font-size: 14px; }
+  .exp-pct    { font-size: 14px; min-width: 34px; }
+  .exp-track  { height: 8px; }
+
+  /* ═══ Slide 5: השוואה ═══ */
+  .comp-table5 { gap: 6px; }
+  .comp-row5   { padding: 8px 10px; gap: 6px; }
+  .c5-lbl { font-size: 14px; }
+  .c5-25  { font-size: 13px; }
+  .c5-26  { font-size: 14px; }
+  .c5-chg { font-size: 13px; }
+  .note-box5 { font-size: 14px; padding: 10px 14px; }
+
+  /* ═══ Slide 6: שעות פתיחה ═══ */
+  .hours-grid { flex-direction: column; gap: 10px; }
+  .hours-col.col-wide { flex: none; }
+  .hc-title { font-size: 19px; }
+  .hour-row { font-size: 16px; }
+  .s6-community { font-size: 16px; margin-top: 12px; }
+  .s6-asterisk  { font-size: 13px; }
+
+  /* ═══ Slide 7: המלצות ═══ */
+  .approval-list { gap: 10px; max-width: 100%; }
+  .approval-item { font-size: 17px; padding: 12px 14px; gap: 10px; }
+  .ai-icon { font-size: 22px; }
+
+  /* ═══ Slide 8: משימות ═══ */
+  .task-list { gap: 10px; max-width: 100%; }
+  .task-item {
+    font-size: 17px;
+    padding: 12px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .s8-responsible { font-size: 17px; padding: 8px 20px; }
+  .ti-date { font-size: 14px; }
+}
